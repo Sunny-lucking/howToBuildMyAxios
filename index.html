@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script type="text/javascript" src="./myAxios.js"></script>
+
+<body>
+<button class="btn">点我发送请求</button>
+<script>
+    document.querySelector('.btn').onclick = function() {
+        // 分别使用以下方法调用，查看myaxios的效果
+        axios({
+          method: 'get',
+          url: 'http://localhost:5000/getTest'
+        }).then(res => {
+          console.log('getAxios 成功响应', res);
+        })
+    }
+</script>
+</body>
+</html>
+</html>
